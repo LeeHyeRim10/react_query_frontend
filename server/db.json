@@ -1,0 +1,118 @@
+{
+  "user": [
+    {
+      "id": "1",
+      "username": "Alice",
+      "password": "1111",
+      "age": 30,
+      "email": "alice@example.com",
+      "city": "New York"
+    },
+    {
+      "id": "2",
+      "username": "Bob",
+      "password": "1111",
+      "age": 25,
+      "email": "bob@example.com",
+      "city": "Los Angeles"
+    },
+    {
+      "id": "3",
+      "username": "Charlie",
+      "password": "1111",
+      "age": 35,
+      "email": "charlie@example.com",
+      "city": "Chicago"
+    },
+    {
+      "id": "4",
+      "username": "David",
+      "password": "1111",
+      "age": 28,
+      "email": "david@example.com",
+      "city": "Houston"
+    },
+    {
+      "username": "ㅅㅅㅅ",
+      "password": "ttt",
+      "confirmPW": "ttt",
+      "age": "111",
+      "email": "sdfsdfsdf@sdfsdf",
+      "city": "rrr",
+      "id": "L1wQVgJvKSg"
+    }
+  ],
+  "employees": [
+    {
+      "id": "2",
+      "name": "qqqq",
+      "email": "qqqq@tttt.com",
+      "job": "backend",
+      "pay": 600
+    },
+    {
+      "id": "3",
+      "name": "wwww1111",
+      "email": "wwww@tttt.com",
+      "job": "db",
+      "pay": 600
+    },
+    {
+      "name": "qwqwqw",
+      "email": "qwdf@sdfsdf",
+      "job": "qw",
+      "pay": "23234231111",
+      "id": "gE6F3gTiOag"
+    },
+    {
+      "name": "dsd",
+      "email": "dfdgdfg@ddd",
+      "job": "ffffffff",
+      "pay": "111111111",
+      "id": "B6S7M5lT_SM"
+    }
+  ],
+  "todos": [
+    {
+      "id": "qyjsAsjuEAU",
+      "subject": "testtest",
+      "checked": true
+    },
+    {
+      "id": "1azTXU-L1Xc",
+      "subject": "testtest111",
+      "checked": false
+    },
+    {
+      "id": "Twqz2hTc7pk",
+      "subject": "ㅆㅆㅆㅆㅆ",
+      "checked": false
+    },
+    {
+      "subject": "111111",
+      "checked": false,
+      "id": "nyn8n8En3w0"
+    },
+    {
+      "subject": "ㅂㅈㄷㅂㅈㄷㅂㅈㄷ",
+      "checked": false,
+      "id": "DYR-YvCUEgA"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "product_name": "트빌릿 케이스 1",
+      "color": "Red",
+      "cost_price": 29711,
+      "sale_price": 70400,
+      "category_code": "E6"
+    }
+  ],
+  "sales": [
+    {
+      "id": "8obXHxdyNgI"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

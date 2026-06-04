@@ -1,0 +1,34 @@
+import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { userLoginApi, userRegisterApi } from "../apis/user.api";
+
+export const useLoginUser = () => {
+    const queryClient = useQueryClient();
+
+    return useMutation({
+        mutationFn: userLoginApi,
+
+        onSuccess: (user) => {
+            // axios response 대비 (data 안전 처리)
+            // const user = res?.data ?? res;
+
+            localStorage.setItem("currentUser", JSON.stringify(user));
+
+            queryClient.setQueryData(["user"], user);
+        }
+    });
+};
+
+export const useRegisterUser = () => {
+    return useMutation({
+        mutationFn: userRegisterApi
+    })
+}
+
+export const logout = () => {
+    localStorage.removeItem("currentUser")
+}
+
+export const getCurrentUser = () => {
+    const user = localStorage.getItem("currentUser")
+    return user && JSON.parse(user)
+}
