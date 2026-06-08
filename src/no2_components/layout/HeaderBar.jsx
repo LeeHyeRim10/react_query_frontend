@@ -3,12 +3,16 @@ import styled from 'styled-components'
 import { useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux';
 import { getCurrentUser, logout } from '../../no3_store/hooks/useUser';
+import LoginFormModal from '../user/LoginFormModal';
+import RegisterFormModal from '../user/RegisterFormModal';
 
 const HeaderBar = () => {
 
-  const [mobileMenu, setMobileMenu] = useState(false);
   const navigate = useNavigate();
   const user = getCurrentUser();
+
+  const [loginOpen, setLoginOpen] = useState(false) ;
+  const [registerOpen, setRegisterOpen] = useState(false) ;
 
   const handleLogout = () => {
 
@@ -18,24 +22,14 @@ const HeaderBar = () => {
   }
 
   return (
+    <>
     <Container>
-
       <LeftBox>
-
-        <MenuButton
-          onClick={() => setMobileMenu(!mobileMenu)}
-        >
-          ☰
-        </MenuButton>
-
         <Logo>
           CRUD PROJECT
         </Logo>
-
       </LeftBox>
-
       <RightBox>
-        {console.log(user)}
         {user ? // true
           <div>
             <HeaderButton>{user.username}님</HeaderButton>  
@@ -43,13 +37,15 @@ const HeaderBar = () => {
           </div>
           : // false
           <div>
-            <HeaderButton onClick={()=>navigate("/login")}>로그인</HeaderButton>
-            <HeaderButton onClick={()=>navigate("/register")}>회원가입</HeaderButton>
+            <HeaderButton onClick={()=>setLoginOpen(true)}>로그인</HeaderButton>
+            <HeaderButton onClick={()=>setRegisterOpen(true)}>회원가입</HeaderButton>
           </div>
         }
       </RightBox>
-
     </Container>
+    <LoginFormModal open={loginOpen} setOpen={setLoginOpen}/>
+    <RegisterFormModal open={registerOpen} setOpen={setRegisterOpen}/>
+    </>
   )
 }
 

@@ -37,6 +37,13 @@ const SiderBar = ({ mobileMenu, setMobileMenu }) => {
             고용인정보
           </MenuItem>
 
+          <MenuItem
+            to="/product"
+            onClick={() => setMobileMenu(false)}
+          >
+            상품 정보
+          </MenuItem>
+
         </MenuBox>
 
       </Container>
