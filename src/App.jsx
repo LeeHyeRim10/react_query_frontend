@@ -4,6 +4,8 @@ import { useState } from 'react'
 import HomePage from './no1_pages/HomePage'
 import TodoPage from './no1_pages/TodoPage'
 import EmployeePage from './no1_pages/EmployeePage'
+import ProductPage from './no1_pages/sales/ProductPage'
+import SalesPage from './no1_pages/sales/SalesPage'
 
 import HeaderBar from './no2_components/layout/HeaderBar'
 import SiderBar from './no2_components/layout/SiderBar'
@@ -12,7 +14,6 @@ import styled from 'styled-components'
 // import { Provider } from 'react-redux'
 import store from './no3_store'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-import ProductPage from './no1_pages/sales/ProductPage'
 import 'ag-grid-community/styles/ag-grid.css'
 import 'ag-grid-community/styles/ag-theme-alpine.css'
 import { ModuleRegistry, AllCommunityModule } from 'ag-grid-community'
@@ -36,6 +37,7 @@ function App() {
                 <Route path="/todo" element={<TodoPage />} />
                 <Route path="/employee" element={<EmployeePage />} />
                 <Route path="/product" element={<ProductPage />} />
+                <Route path="/sales" element={<SalesPage />} />
               </Routes>
             </Content>
           </Layout>

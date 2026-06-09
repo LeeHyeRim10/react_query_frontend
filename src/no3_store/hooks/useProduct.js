@@ -41,7 +41,7 @@ export const usePutUpdateProduct = () => {
     return useMutation({
         mutationFn: productPutApi,
         onSuccess: (dataObj) => {
-            console.log(dataObj)
+
             queryClient.setQueryData(
                 ["product"],
                 (old=[]) => old.map(item => (

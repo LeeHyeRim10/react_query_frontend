@@ -44,6 +44,13 @@ const SiderBar = ({ mobileMenu, setMobileMenu }) => {
             상품 정보
           </MenuItem>
 
+          <MenuItem
+            to="/sales"
+            onClick={() => setMobileMenu(false)}
+          >
+            판매 정보
+          </MenuItem>
+
         </MenuBox>
 
       </Container>
@@ -72,7 +79,7 @@ const Container = styled.aside`
   @media (max-width: 768px) {
 
     left: ${({ mobileMenu }) =>
-      mobileMenu ? '0' : '-240px'};
+    mobileMenu ? '0' : '-240px'};
 
     z-index: 2000;
   }

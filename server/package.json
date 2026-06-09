@@ -4,12 +4,15 @@
    "description": "",
    "main": "index.js",
    "scripts": {
-     "start": "json-server --watch db.json --port 3001"
+      "start": "json-server --watch db.json --port 3001"
    },
    "keywords": [],
    "author": "",
    "license": "ISC",
    "dependencies": {
-     "json-server": "^0.17.4"
+      "ag-grid-community": "^35.3.1",
+      "ag-grid-react": "^35.3.1",
+      "antd": "^6.4.3",
+      "json-server": "^0.17.4"
    }
- }
+}

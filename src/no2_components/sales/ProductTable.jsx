@@ -73,7 +73,7 @@ const ProductTable = () => {
         setOpen={setOpen}
         initialValues={newProduct}
         onSubmit={ async (productObj) => {
-            console.log(productObj)
+
             if(newProduct) {
                 await updateMutation.mutateAsync({...productObj, id: newProduct.id})
             }else {

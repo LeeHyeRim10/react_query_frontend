@@ -13,7 +13,7 @@ export const userAllGetApi = async () => { // async, await 비동기 처리 (api
 // 특정 obj 호출 {} response obj
 export const userLoginApi = async (loginUser) => {
     try {
-        const response = await axios.get(`http://localhost:3001/user?username=${loginUser.username}`)
+        const response = await axios.get(`http://localhost:3001/user?name=${loginUser.username}`)
         // console.log("users", response.data)
         const users = response.data
 
@@ -42,7 +42,7 @@ export const userLoginApi = async (loginUser) => {
 
 export const userRegisterApi = async (userObj) => {
     try {
-        const response = await axios.get(`http://localhost:3001/user?username=${userObj.username}`)
+        const response = await axios.get(`http://localhost:3001/user?name=${userObj.username}`)
         const users = response.data
         console.log(response)
         if (users.length > 0) {

@@ -32,7 +32,7 @@ const HeaderBar = () => {
       <RightBox>
         {user ? // true
           <div>
-            <HeaderButton>{user.username}님</HeaderButton>  
+            <HeaderButton>{user.name}님</HeaderButton>  
             <HeaderButton onClick={handleLogout}>로그아웃</HeaderButton>  
           </div>
           : // false
