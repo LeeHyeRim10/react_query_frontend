@@ -6,6 +6,7 @@ import AuthControl from '../../no2_components/layout/AuthControl';
 const SalesPage = () => {
 
     const user = getCurrentUser();
+    
     if (!user) {
         return (
             <AuthControl message="로그인 후 판매 정보 접근 가능" />

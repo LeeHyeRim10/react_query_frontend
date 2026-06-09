@@ -9,7 +9,7 @@ export const useAllGetUser = () => {
 }
 
 export const useLoginUser = () => {
-    const queryClient = useQueryClient();
+    // const queryClient = useQueryClient();
 
     return useMutation({
         mutationFn: userLoginApi,
@@ -20,7 +20,7 @@ export const useLoginUser = () => {
 
             localStorage.setItem("currentUser", JSON.stringify(user));
 
-            queryClient.setQueryData(["user"], user);
+            // queryClient.setQueryData(["user"], user);
         }
     });
 };
